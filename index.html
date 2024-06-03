@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .form-container {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Небольшая тень */
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container form label {
+            margin-bottom: 10px;
+        }
+        .form-container form input[type="text"],
+        .form-container form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-container form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .auth-form {
+            box-shadow: 0 8px 16px rgba(46, 134, 193, 0.2);
+            margin-right: -500px;
+        }
+
+        .login-form {
+            box-shadow: 0 8px 16px rgba(48, 63, 159, 0.2);
+            height: 250px;
+            margin-left: -500px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container auth-form">
+        <h2>Авторизация</h2>
+        <form action="process.php" method="post">
+            <label for="phone">Номер телефона:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm_password">Подтвердить пароль:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" name="address" required>
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </div>
+    <div class="form-container login-form">
+        <h2>Вход</h2>
+        <form action="vhod.php" method="post">
+            <label for="login_phone">Номер телефона:</label>
+            <input type="text" id="login_phone" name="login_phone" required>
+            <label for="login_password">Пароль:</label>
+            <input type="password" id="login_password" name="login_password" required>
+            <input type="submit" value="Войти">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
